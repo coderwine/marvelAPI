@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Avengers';
+    src: url('./assets/AvengeroDisassembledRegular-nRvd4.ttf');
+}
+
+body {
+    background-image: 
+    linear-gradient(to bottom, rgba(255,255,255,.25), rgba(255,0,0,.5), rgba(0,0,0,.75)), 
+    url('./assets/marvelBkground.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 100% auto;
+    margin-top: 8rem;
+}
+
+/* NAV / FEEDBACK */
+
+#getMarvel {
+    margin: 2rem;
+    width: 10rem;
+}
+
+#bar {
+    margin: 0 1rem 1rem 1rem;
+}
+
+h3 {
+    font-family: 'Avengers', sans-serif;
+    text-shadow: 2px 2px 12px whitesmoke;
+    margin-left: 2rem;
+}
+
+#deadpoolSayz {
+    background-image: url('./assets/dpool.jpg');
+    background-size: 100%;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 100px;
+    margin-left: 15rem;
+}
+
+/* CARDS */
+
+.card{
+    margin: .25rem;
+}
+
+/* MODAL */
+.modal {
+    background-image: 
+    url('./assets/dpoolmodalBack_opt2.png');
+    background-repeat: no-repeat;
+    background-position-x: 120%;
+}
+
+table {
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    width: 100vw;
+    height: 5rem;
+    margin: 1rem 0 0 0;
+    padding-top: 1rem;
+}
+
+footer, ul, li {
+    margin: 0 1rem;
+    float: right;
+}
+
