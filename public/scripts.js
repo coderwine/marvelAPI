@@ -45,8 +45,8 @@ async function fetchIt() {
 
     // Searching per ID that was stored.  Each ID needs it's own individual fetch request.
     for(i of pickCharIds()) {
-        // console.log('Search: ', i);
-        url = `${baseURL}/v1/public/characters/${i}?apikey=${marvelPublicKey}&hash=${marvelPrivKey}`;
+
+        url = `${baseURL}/v1/public/characters/${i}?ts=1&apikey=${marvelPublicKey}&hash=${marvelPrivKey}`;
         
         const res = await fetch(url);
         const json = await res.json();
@@ -142,12 +142,10 @@ function displayCards() {
 //Modal Info:
 function dPoolSays() {
     
-    console.log(hydraAgents);
     let tbody = document.querySelector('tbody');
 
     //Create Hydra Table Build
     hydraAgents.forEach((h,i) => {
-        console.log(h, i);
         let tr = document.createElement('tr');
         let agentNum = document.createElement('td');
         let agent = document.createElement('td');
