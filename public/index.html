@@ -12,9 +12,9 @@
 <body onclick="showChar(event)">
 
     <nav class="navbar navbar-expand-md fixed-top navbar-light bg-danger ">
-        <button id="getMarvel" class="btn btn-outline-dark md" type="button">Group Up!</button>
         <!-- NOTE: Make this a dropdown with other classes -->
         <button id="rosterBtn" class="btn btn-outline-dark md" type="button" onclick="displayCards()">Roster</button>
+        <button id="getMarvel" class="btn btn-outline-dark md" type="button">Group Up!</button>
         <h3>ASSEMBLED for Blue Badge</h3>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-dark"  id="deadpoolSayz" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -68,7 +68,11 @@
   </div>
 
     <!-- JAVASCRIPT -->
+    <!-- hash -->
+    <script src="js/md5.min.js"></script>
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- local scripts -->
     <script src="./cohorts.js"></script>
     <script src="./keys.js"></script>
     <script src="./scripts.js"></script>

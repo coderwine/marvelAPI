@@ -15,6 +15,9 @@ body {
 }
 
 /* NAV / FEEDBACK */
+#rosterBtn {
+    margin-left: 2rem;
+}
 
 #getMarvel {
     margin: 2rem;
@@ -36,9 +39,9 @@ h3 {
     background-size: 100%;
     background-position-y: top;
     background-repeat: no-repeat;
-    height: 65px;
     width: 100px;
-    margin-left: 15rem;
+    height: 4em;
+    margin: 0 10rem;
 }
 
 /* CARDS */

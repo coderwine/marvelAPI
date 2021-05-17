@@ -12,6 +12,9 @@ dpool.style.display = 'none';
 
 btn.addEventListener('click', fetchIt)
 
+// let hash = md5('test');
+// console.log('Hash', privKey);
+
 // Default IDs to randomly pull from.
 let marvelCharIds = [
     1017474, 1009281, 1009282, 1010735, 1009539, 1011389, 1010743, 1009338, 1010373, 1010933, 1010704, 1009372, 1009382, 1009508, 1009404, 1009407, 1009215, 1009417, 1009490, 1009452, 1009456, 1009459, 1009464, 1009471, 1009472, 1009465, 1011388, 1009156, 1009504, 1009526, 1009546, 1009562, 1009583, 1009592, 1017603, 1016181, 1011010, 1010860, 1010978, 1009631, 1009652, 1017576, 1011128, 1011226, 1009718, 1009722, 1009185, 1009187, 1009191, 1009197, 1009220, 1010338
@@ -42,12 +45,16 @@ let pickCharIds = () => {
 async function fetchIt() {
     bar.parentElement.style.display = 'visible';
     let toFill;
+    // console.log(marvelPrivKey);
 
     // Searching per ID that was stored.  Each ID needs it's own individual fetch request.
     for(i of pickCharIds()) {
+        let t = Math.floor(Math.random() * 4000 + 1).toString();
+        // console.log(t);
 
-        url = `${baseURL}/v1/public/characters/${i}?ts=1&apikey=${marvelPublicKey}&hash=${marvelPrivKey}`;
-        
+        // url = `${baseURL}/v1/public/characters/${i}?apikey=${marvelPublicKey}&hash=${marvelPrivKey}`;
+        url = `${baseURL}/v1/public/characters/${i}?ts=${t}&apikey=${marvelPublicKey}&hash=${t+marvelPrivKey+marvelPublicKey}`;
+        console.log(url);
         const res = await fetch(url);
         const json = await res.json();
         const store = await marvelCharArr.push(json.data.results[0])
