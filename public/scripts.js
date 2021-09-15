@@ -1,6 +1,4 @@
 const baseURL = 'https://gateway.marvel.com';
-const marvelPublicKey = 'b5c365b077cc6a2a9603eae08439809b';
-const marvelPrivKey = '261541b3baf6d3153e818b64ce427386623be60e';
 
 const btn = document.getElementById('getMarvel');
 const bar = document.getElementById('statusBar');
@@ -14,6 +12,7 @@ dpool.style.display = 'none';
 
 btn.addEventListener('click', fetchIt)
 
+// console.log('test clg 2');
 // let hashtest = md5('test');
 // console.log('Hash updated', hashtest);
 
@@ -51,11 +50,11 @@ async function fetchIt() {
 
     // Searching per ID that was stored.  Each ID needs it's own individual fetch request.
     for(i of pickCharIds()) {
-        let t = Math.floor(Math.random() * 4000 + 1).toString();
-        let hashValue = md5(t+marvelPrivKey+marvelPublicKey);
+        // let t = Math.floor(Math.random() * 4000 + 1).toString();
+        // let hashValue = md5(t+marvelPrivKey+marvelPublicKey);
 
-        // url = `${baseURL}/v1/public/characters/${i}?apikey=${marvelPublicKey}&hash=${marvelPrivKey}`;
-        url = `${baseURL}/v1/public/characters/${i}?ts=${t}&apikey=${marvelPublicKey}&hash=${hashValue}`;
+        url = `${baseURL}/v1/public/characters/${i}?apikey=${marvelPublicKey}&hash=${marvelPrivKey}`;
+        // url = `${baseURL}/v1/public/characters/${i}?ts=${t}&apikey=${marvelPublicKey}&hash=${hashValue}`;
         
         console.log(url);
         const res = await fetch(url);
